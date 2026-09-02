@@ -1,4 +1,4 @@
-name: Extract Flutter Project Update
+name: Extract Flutter Project
 
 on:
   workflow_dispatch:
@@ -44,6 +44,7 @@ jobs:
           if git diff --cached --quiet; then
             echo "No changes to commit."
           else
-            git commit -m "Extract Flutter project update"
+            git commit -m "Extract Flutter project"
             git push --force
           fi
+          
