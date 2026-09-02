@@ -16,8 +16,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
 
       - name: Extract project ZIP
         run: |
@@ -47,6 +45,5 @@ jobs:
             echo "No changes to commit."
           else
             git commit -m "Extract Flutter project"
-            git pull --rebase origin main
-            git push origin main
+            git push --force
           fi
